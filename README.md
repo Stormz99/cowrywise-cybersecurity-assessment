@@ -153,7 +153,7 @@ echo ""
 
 A Python script `(scripts/decode_image.py)` was created to decode the Base64 data contained in `image.txt` and save it as a PNG image.
 
-## Purpose
+### Purpose
 
 The objectives of this task are:
 
@@ -174,20 +174,14 @@ python3 python3 scripts/decode_image.py
 ---
 ## Resulting Image
 
-The Base64-encoded file `image.txt` was successfully decoded using the Python script `scripts/decode_image.py`.
-
-- The decoded output was saved as:  
-  `decoded_outputs/decoded_image.bin`
-- For easier viewing, it was converted to PNG format:  
-  `decoded_outputs/decoded_image.png`
+The Base64-encoded file `image.txt` was successfully decoded using the Python script `scripts/decode_image.py`. The decoded output was saved as `decoded_outputs/decoded_image.bin` and, for easier viewing, converted to PNG format at `decoded_outputs/decoded_image.png`.
 
 ### Notes
 
-- The Python script **automatically searches** for `image.txt` in the **current** or **parent directory**, making it easy to run without modifying paths.
-- The resulting PNG image is now ready for **further forensic analysis**, including:
-  - EXIF metadata extraction
-  - Hidden string or flag detection
+- The Python script **automatically searches** for `image.txt` in the **current** or **parent directory**, so it can be run without modifying paths.
+- The resulting PNG image is now ready for **further forensic analysis**, including EXIF metadata extraction and hidden string/flag detection.
 
 ![decode-image](./image/decoded_image.png)
 
 ---
+
