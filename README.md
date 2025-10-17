@@ -138,3 +138,14 @@ cat analysis/original_hash.txt
 ![hash-generation](./image/final-depencies.png)
 
 ---
+
+## Base64 Pattern Recognition
+To inspect the structure of the image.txt file and confirm whether it contains encoded content, I examined the first 200 characters using the head command.
+```bash
+head -c 200 image.txt
+echo ""
+```
+
+![pattern-recognition](./image/pattern-recognition.png)
+
+---
