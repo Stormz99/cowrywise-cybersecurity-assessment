@@ -135,7 +135,7 @@ shasum -a 256 image.txt > analysis/original_hash.txt
 cat analysis/original_hash.txt
 ```
 
-![hash-generation](./image/final-depencies.png)
+![hash-generation](./image/hash-verification.png)
 
 ---
 
