@@ -9,7 +9,6 @@
 ---
 
 ## Overview
-
 This task involves performing forensic analysis on a suspicious file named `image.txt`, provided as part of the Cowrywise Cybersecurity Internship assessment.  
 The objective was to determine if any hidden or encoded information existed within the file and to recover any embedded data through structured forensic investigation.
 
@@ -73,10 +72,7 @@ After verifying the required tools, the next step was to organize the workspace 
 This ensures all decoded files, scripts, and screenshots are neatly separated for traceability.
 
 ```bash
-# Create project subdirectories
 mkdir -p analysis scripts screenshots decoded_outputs
-
-# Verify folder creation
 ls -la
 ```
 
@@ -97,4 +93,33 @@ cowrywise-assessment-work/
 ├── decoded_outputs/              # Decoded image or extracted hidden data
 └── image/                        # Image assets for README (tool checks, installations, etc.)
 ```
+---
+
+## File Inspection
+
+The provided file for analysis was initially downloaded as a ZIP archive, extracted, and moved to the working directory as image.txt.
+This file was suspected to contain hidden or encoded data, such as Base64 or steganographic content.
+
+I verified the file’s presence and size using:
+
+```bash
+ls -lh image.txt
+```
+
+Next, I identified the file type using:
+
+```bash
+file image.txt
+```
+
+The output indicated that the file is a plain ASCII text file, likely containing a Base64-encoded image, given its continuous single-line content and lack of line terminators.
+
+Finally, I checked the file size and byte count using:
+```bash
+du -h image.txt
+wc -c image.txt
+```
+
+![file-inspection](./image/file-inspection.png)
+
 ---
