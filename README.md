@@ -123,3 +123,16 @@ wc -c image.txt
 ![file-inspection](./image/file-inspection.png)
 
 ---
+
+## File Integrity Generation  
+
+To ensure the integrity of the provided file and detect any potential tampering, a SHA-256 hash was generated using the built-in shasum command on macOS.
+This serves as a digital fingerprint for verifying that the file remains unmodified throughout the analysis.
+
+```bash
+shasum -a 256 image.txt > analysis/original_hash.txt
+
+cat analysis/original_hash.txt
+```
+
+![hash-generation](./image/hash-verification.png)
