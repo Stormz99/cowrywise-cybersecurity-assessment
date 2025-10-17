@@ -1,0 +1,69 @@
+# Cowrywise Cybersecurity Assessment - Image Forensics Task
+
+## Author
+**Name:** Ijiola Abiodun  
+**Email:** ijiolaabiodun7@gmail.com  
+**Role Applied:** Cybersecurity & IT Operations Analyst  
+**Date:** October 2025  
+
+---
+
+## Overview
+
+This task involves performing forensic analysis on a suspicious file named `image.txt`, provided as part of the Cowrywise Cybersecurity Internship assessment.  
+The objective was to determine if any hidden or encoded information existed within the file and to recover any embedded data through structured forensic investigation.
+
+My approach followed a simple workflow:  
+1. **Identification** – Verify the file type and characteristics.  
+2. **Extraction** – Use various tools to search for hidden or embedded content.  
+3. **Analysis** – Inspect the extracted data for clues or patterns.  
+4. **Reporting** – Summarize the findings clearly and reproducibly.  
+
+---
+**Operating System:** macOS 
+**Terminal Environment:** zsh/bash  
+**Working Directory:** `cowrywise-assessment-work`  
+
+---
+
+## Pre-Installation & Environment Setup
+
+Before starting the investigation, I verified the availability of basic forensic tools on my system using the `which` command.
+
+The following tools were checked for availability before starting the analysis:
+
+| Tool | Description | Installed |
+|------|--------------|------------|
+| `file` | Identifies file type and MIME info |  `/usr/bin/file` |
+| `strings` | Extracts readable text strings from binary data | ✅ `/usr/bin/strings` |
+| `sha256sum` | Generates file checksums for verification | ❌ Not found |
+| `steghide` | Performs steganographic extraction (hidden data in images) | ❌ Not found |
+| `binwalk` | Analyzes binary files and extracts embedded objects | ❌ Not found |
+| `exiftool` | Extracts metadata (EXIF) from images or media files | ❌ Not found |
+
+### Tool Check Results
+![tool-check](./image/tool-check.png)
+
+
+To ensure full forensic capabilities, the missing tools (`exiftool`, `binwalk`, `steghide`, and `sha256sum`) can be installed using **Homebrew**:
+
+```bash
+brew install exiftool binwalk steghide coreutils
+```
+![tool-installation](./image/installing-dependencies-1.png)
+![tool-installation](./image/installing-dependencies-2.png)
+![tool-installation](./image/installing-corutils-1.png)
+![tool-installation](./image/installing-corutils-2.png)
+After verifying the forensic tools using the `which` command, the following results were observed:
+
+| Tool | Description | Installed |
+|------|--------------|------------|
+| `file` | Identifies file type and MIME info | ✅ `/usr/bin/file` |
+| `strings` | Extracts readable text strings from binary data | ✅ `/usr/bin/strings` |
+| `sha256sum` | Generates file checksums for verification | ✅ `/usr/local/bin/sha256sum` |
+| `binwalk` | Analyzes binary files and extracts embedded objects | ✅ `/usr/local/bin/binwalk` |
+| `exiftool` | Extracts metadata (EXIF) from images or media files | ✅ `/usr/local/bin/exiftool` |
+
+![final-dependies](./image/final-depencies.png)
+---
+
