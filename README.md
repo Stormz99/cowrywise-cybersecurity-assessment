@@ -2,8 +2,8 @@
 
 ## Author
 **Name:** Ijiola Abiodun  
-**Email:** ijiolaabiodun7@gmail.com  
-**Role Applied:** Cybersecurity & IT Operations Analyst  
+**Email:** ijiolaabiodunusman@gmail.com  
+**Role Applied:** Cybersecurity Internship
 **Date:** October 2025  
 
 ---
@@ -65,5 +65,36 @@ After verifying the forensic tools using the `which` command, the following resu
 | `exiftool` | Extracts metadata (EXIF) from images or media files | ✅ `/usr/local/bin/exiftool` |
 
 ![final-dependies](./image/final-depencies.png)
+
 ---
 
+## Project Structure Setup
+After verifying the required tools, the next step was to organize the workspace into a clear forensic analysis structure.
+This ensures all decoded files, scripts, and screenshots are neatly separated for traceability.
+
+```bash
+# Create project subdirectories
+mkdir -p analysis scripts screenshots decoded_outputs
+
+# Verify folder creation
+ls -la
+```
+
+![creating-subdirectories](./image/creating-subdirectories.png)
+
+---
+
+## Project Structure Tree
+The project directory is structured for clarity and reproducibility during forensic analysis.
+Each folder serves a defined purpose from raw input data to decoded outputs and reports.
+```
+cowrywise-assessment-work/
+├── README.md                     # Project documentation
+├── image.txt                     # Provided assessment file (Base64 encoded)
+├── analysis/                     # Stores forensic outputs (hashes, EXIF, strings, binwalk)
+├── scripts/                      # Contains Python/Bash decoding scripts
+├── screenshots/                  # Screenshots of command executions and results
+├── decoded_outputs/              # Decoded image or extracted hidden data
+└── image/                        # Image assets for README (tool checks, installations, etc.)
+```
+---
