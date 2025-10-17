@@ -1,10 +1,10 @@
-# Cowrywise Cybersecurity Assessment - Image Forensics Task
+# Cowrywise Cybersecurity Assessment (Image Forensics Analysis)
 
 ## Author
 **Name:** Ijiola Abiodun  
 **Email:** ijiolaabiodunusman@gmail.com  
 **Role Applied:** Cybersecurity Internship
-**Date:** October 2025  
+**Date:** 17th of October 2025  
 
 ---
 
@@ -72,7 +72,7 @@ After verifying the required tools, the next step was to organize the workspace 
 This ensures all decoded files, scripts, and screenshots are neatly separated for traceability.
 
 ```bash
-mkdir -p analysis scripts screenshots decoded_outputs
+mkdir -p analysis scripts decoded_outputs
 ls -la
 ```
 
@@ -88,8 +88,7 @@ cowrywise-assessment-work/
 ├── README.md                     # Project documentation
 ├── image.txt                     # Provided assessment file (Base64 encoded)
 ├── analysis/                     # Stores forensic outputs (hashes, EXIF, strings, binwalk)
-├── scripts/                      # Contains Python/Bash decoding scripts
-├── screenshots/                  # Screenshots of command executions and results
+├── scripts/                      # Contains Python/Bash decoding scripts                  
 ├── decoded_outputs/              # Decoded image or extracted hidden data
 └── image/                        # Image assets for README (tool checks, installations, etc.)
 ```
@@ -171,5 +170,24 @@ python3 python3 scripts/decode_image.py
 ![create-decode](./image/create-decode.png)
 
 ![run-script](./image/run-script.png)
+
+---
+## Resulting Image
+
+The Base64-encoded file `image.txt` was successfully decoded using the Python script `scripts/decode_image.py`.
+
+- The decoded output was saved as:  
+  `decoded_outputs/decoded_image.bin`
+- For easier viewing, it was converted to PNG format:  
+  `decoded_outputs/decoded_image.png`
+
+### Notes
+
+- The Python script **automatically searches** for `image.txt` in the **current** or **parent directory**, making it easy to run without modifying paths.
+- The resulting PNG image is now ready for **further forensic analysis**, including:
+  - EXIF metadata extraction
+  - Hidden string or flag detection
+
+![decode-image](./image/decoded_image.png)
 
 ---
