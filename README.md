@@ -174,14 +174,9 @@ python3 python3 scripts/decode_image.py
 ---
 ## Resulting Image
 
-The Base64-encoded file `image.txt` was successfully decoded using the Python script `scripts/decode_image.py`. The decoded output was saved as `decoded_outputs/decoded_image.bin` and, for easier viewing, converted to PNG format at `decoded_outputs/decoded_image.png`.
+The Base64-encoded file `image.txt` was successfully decoded using `scripts/decode_image.py`. The decoded output was saved as `decoded_outputs/decoded_image.bin` and converted to PNG format at `decoded_outputs/decoded_image.png`.
 
-### Notes
-
-- The Python script **automatically searches** for `image.txt` in the **current** or **parent directory**, so it can be run without modifying paths.
-- The resulting PNG image is now ready for **further forensic analysis**, including EXIF metadata extraction and hidden string/flag detection.
+The PNG image clearly displays the hidden message, so no further hidden data extraction or steganographic analysis was necessary.
 
 ![decode-image](./image/decoded_image.png)
-
----
 
