@@ -149,3 +149,27 @@ echo ""
 ![pattern-recognition](./image/pattern-recognition.png)
 
 ---
+
+## Decoding the Base64 Content
+
+A Python script `(scripts/decode_image.py)` was created to decode the Base64 data contained in `image.txt` and save it as a PNG image.
+
+## Purpose
+
+The objectives of this task are:
+
+1. **Decode the Base64-encoded file** `image.txt` into a usable image format.
+2. **Ensure file integrity** by verifying the size and content of the decoded image.
+3. **Identify the file type** to confirm the successful decoding process.
+
+```bash
+chnod +x scripts/decode_image.py
+
+python3 python3 scripts/decode_image.py
+```
+
+![create-decode](./image/create-decode.png)
+
+![run-script](./image/run-script.png)
+
+---

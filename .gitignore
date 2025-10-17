@@ -1,0 +1,4 @@
+touch .gitignore
+echo "decoded_outputs/" >> .gitignore
+echo "*.DS_Store" >> .gitignore
+echo "__pycache__/" >> .gitignore
