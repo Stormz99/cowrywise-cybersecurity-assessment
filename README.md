@@ -181,7 +181,7 @@ The Base64-encoded file `image.txt` was successfully decoded using the Python sc
 - The Python script **automatically searches** for `image.txt` in the **current** or **parent directory**, so it can be run without modifying paths.
 - The resulting PNG image is now ready for **further forensic analysis**, including EXIF metadata extraction and hidden string/flag detection.
 
-![decode-image](./decoded_outputs/decoded_image.png)
+![decode-image](./image/decoded_image.png)
 
 ---
 
