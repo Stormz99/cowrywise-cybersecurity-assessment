@@ -1,4 +1,4 @@
-# Cowrywise Cybersecurity Assessment (Image Forensics Analysis)
+# Cowrywise Cybersecurity Assessment
 
 ## Author
 **Name:** Ijiola Abiodun  
