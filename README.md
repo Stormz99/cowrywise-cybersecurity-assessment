@@ -185,7 +185,9 @@ The Base64-encoded file `image.txt` was successfully decoded using the Python sc
 
 ---
 
-## EXIF Metadata
+**EXIF (Exchangeable Image File Format)** is metadata embedded in image files that can include information such as the camera model, creation date, software used, and sometimes hidden comments or data.  
+
+Analyzing EXIF metadata is an essential step in forensic investigations because it can reveal **hidden clues about the image’s origin, history, or embedded information** that might not be visible in the image itself.
 
 The EXIF metadata for the decoded image can be extracted using:
 
@@ -193,10 +195,28 @@ The EXIF metadata for the decoded image can be extracted using:
 
 exiftool scripts/decoded_outputs/decoded_image.bin > analysis/exif_data.txt
 cat analysis/exif_data.txt
+
 ```
 
 ![exif-analysis](./image/exif-1.png)
 
 ![exif-analysis](./image/exif-2.png)
+
+---
+
+## Embedded Data Scan (Binwalk)
+
+**Binwalk** is a tool used to analyze binary files for **embedded files, compressed archives, or hidden content**.  
+It is commonly used in forensic investigations and CTF challenges to detect **steganography or hidden payloads** inside images, firmware, or other binaries.
+
+Performing a Binwalk scan on the decoded image allows us to **verify if any hidden data exists beyond the visible image or EXIF metadata**.
+
+```bash
+
+binwalk scripts/decoded_outputs/decoded_image.bin > analysis/binwalk_results.txt 2>&1
+cat analysis/binwalk_results.txt
+```
+
+![binwalk-analysis](./image/create-decode.png)
 
 ---
