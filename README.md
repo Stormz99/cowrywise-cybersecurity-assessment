@@ -218,6 +218,6 @@ binwalk scripts/decoded_outputs/decoded_image.bin > analysis/binwalk_results.txt
 cat analysis/binwalk_results.txt
 ```
 
-![binwalk-analysis](./image/)
+![binwalk-analysis](./image/binwalk.png)
 
 ---
