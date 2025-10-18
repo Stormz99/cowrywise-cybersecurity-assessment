@@ -221,3 +221,37 @@ cat analysis/binwalk_results.txt
 ![binwalk-analysis](./image/binwalk.png)
 
 ---
+
+## Challenges Faced
+
+During the forensic analysis of the decoded image, the following challenges were encountered:
+
+- **File Path Confusion**: The decoded image was saved in `scripts/decoded_outputs/` instead of the expected `decoded_outputs/`, causing initial errors when running `exiftool` and `binwalk`.  
+- **Tool Familiarity**: Understanding the output and options of forensic tools like `exiftool` and `binwalk` required careful reading and testing.  
+- **Output Management**: Capturing and organizing outputs into the `analysis/` directory was necessary for clear documentation and reporting.
+
+These challenges were successfully addressed by verifying file locations, learning tool usage, and redirecting outputs to dedicated files.
+
+---
+
+## Lessons Learned
+
+- Proper **file path management** is crucial to avoid errors in forensic workflows.  
+- **EXIF metadata** provides essential information about image origin, creation, and potential hidden data.  
+- **Binwalk** is valuable for detecting embedded files or compressed data in binaries, complementing metadata analysis.  
+- Documenting steps in a **structured and clear manner** enhances both assessment quality and professional reporting skills.
+
+---
+
+## Conclusion & Next Steps
+
+The decoded image was thoroughly analyzed using:
+
+1. **EXIF Metadata Extraction** (`exiftool`)  
+2. **Embedded Data Scan** (`binwalk`)  
+
+All results have been saved in the `analysis/` directory for reference.  
+
+> **Next Steps**: Although no steganography analysis was performed, this could be explored in future investigations if deeper forensic scrutiny is required.
+
+This README demonstrates a complete and professional workflow for **image forensic analysis**, highlighting methodology, tools, and reflective insights.
