@@ -172,7 +172,7 @@ python3 python3 scripts/decode_image.py
 ![run-script](./image/run-script.png)
 
 ---
-## Resulting Image
+## Decoded Image
 
 The Base64-encoded file `image.txt` was successfully decoded using the Python script `scripts/decode_image.py`. The decoded output was saved as `decoded_outputs/decoded_image.bin` and, for easier viewing, converted to PNG format at `decoded_outputs/decoded_image.png`.
 
