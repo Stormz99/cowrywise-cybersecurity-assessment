@@ -184,6 +184,7 @@ The Base64-encoded file `image.txt` was successfully decoded using the Python sc
 ![decode-image](./image/decoded_image.png)
 
 ---
+## EXIF Data Scan
 
 **EXIF (Exchangeable Image File Format)** is metadata embedded in image files that can include information such as the camera model, creation date, software used, and sometimes hidden comments or data.  
 
@@ -217,6 +218,6 @@ binwalk scripts/decoded_outputs/decoded_image.bin > analysis/binwalk_results.txt
 cat analysis/binwalk_results.txt
 ```
 
-![binwalk-analysis](./image/binwalk.png)
+![binwalk-analysis](./image/)
 
 ---
